@@ -11,381 +11,385 @@ import 'mhsprestasi.dart';
 class Profil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      leading: IconButton(
-              icon: const Icon(Icons.arrow_back),
-              color: Colors.white, 
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-      title: const Text(
-        'Profil Kelompok 17',
-        style: TextStyle(
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
           color: Colors.white,
-          fontSize: 20.0,
-          fontFamily: 'Poppins',
-          fontWeight: FontWeight.w400,
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
         ),
+        title: const Text(
+          'Profil Kelompok 17',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 20.0,
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w400,
+          ),
+        ),
+        backgroundColor: const Color(0xFFe7e571),
       ),
-      backgroundColor: const Color(0xFFe7e571),
-    ),
-    body: ListView(
-      children: [
-        Container(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text(
-                  'Biodata Anggota 1',
-                  style: TextStyle(
-                    fontSize: 15.0,
-                    color: Colors.black,
-                    fontFamily: 'Poppins',
-                    fontWeight: FontWeight.w600,
+      body: ListView(
+        children: [
+          Container(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    'Biodata Anggota 1',
+                    style: TextStyle(
+                      fontSize: 15.0,
+                      color: Colors.black,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
-              ),
-              Container(
-                alignment: Alignment.center,
-                child: Image.asset(
-                  'image/talia.jpg',
-                  width: 100,
-                  fit: BoxFit.contain,
+                Container(
+                  alignment: Alignment.center,
+                  child: Image.asset(
+                    'image/talia.jpg',
+                    width: 100,
+                    fit: BoxFit.contain,
+                  ),
                 ),
-              ),
-              const Text(
-                'Nama : Talia Aprianti',
-                style: TextStyle(
-                  fontSize: 12.0,                
-                  color: Colors.black,
-                  fontFamily: 'Poppins',
-                  fontWeight: FontWeight.w400,
+                const Text(
+                  'Nama : Talia Aprianti',
+                  style: TextStyle(
+                    fontSize: 12.0,
+                    color: Colors.black,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w400,
+                  ),
                 ),
-              ),
-              const Text(
-                      'TTL : Surabaya, 14 April 2004',
-                      style: TextStyle(
-                        fontSize: 12.0,
-                        color: Colors.black,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                    const Text(
-                      'Alamat : Perum. Taman Puspa Sari Candi-Sidoarjo',
-                      style: TextStyle(
-                        fontSize: 12.0,
-                        color: Colors.black,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                    const Text(
-                      'No : 083849727449',
-                      style: TextStyle(
-                        fontSize: 12.0,
-                        color: Colors.black,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),                    
-                    const Text(
-                      'Riwayat Pendidikan : SMKN 2 Buduran',
-                      style: TextStyle(
-                        fontSize: 12.0,
-                        color: Colors.black,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                    const Text(
-                      'Prestasi : Juara 2 Lomba UI Koperasi Sekolah',
-                      style: TextStyle(
-                        fontSize: 12.0,
-                        color: Colors.black,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                    Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(3.0),
-                                child: ElevatedButton(
-                                  onPressed: () {
-                                    _launchEmail('22082010035@student.upnjatim.ac.id');
-                                  },
-                                  style: ElevatedButton.styleFrom(
-                                    backgroundColor: const Color.fromARGB(255, 207, 205, 89),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(20.0),
-                                    ),
-                                  ),
-                                  child: const Row(
-                                    children: [
-                                      Icon(
-                                        Icons.email,
-                                        color: Colors.white,
-                                        size: 16.0,
-                                      ),
-                                      SizedBox(width: 8),
-                                      Text(
-                                        'Email',
-                                        style: TextStyle(
-                                          fontSize: 12.0,
-                                          color: Colors.white,
-                                          fontFamily: 'Poppins',
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(3.0), 
-                                child: ElevatedButton(
-                                  onPressed: () {
-                                    const url = 'https://github.com/Talia-Apr';
-                                    _launchGitHub(url);
-                                  },
-                                  style: ElevatedButton.styleFrom(
-                                    backgroundColor: const Color.fromARGB(255, 207, 205, 89),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(20.0),
-                                    ),
-                                  ),
-                                  child: const Row(
-                                    children: [
-                                      FaIcon(
-                                        FontAwesomeIcons.github,
-                                        color: Colors.white,
-                                        size: 16.0,
-                                      ),
-                                      SizedBox(width: 8),
-                                      Text(
-                                        'GitHub',
-                                        style: TextStyle(
-                                          fontSize: 12.0,
-                                          color: Colors.white,
-                                          fontFamily: 'Poppins',
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                  ],
+                const Text(
+                  'TTL : Surabaya, 14 April 2004',
+                  style: TextStyle(
+                    fontSize: 12.0,
+                    color: Colors.black,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w400,
+                  ),
                 ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(5.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                const Text(
+                  'Alamat : Perum. Taman Puspa Sari Candi-Sidoarjo',
+                  style: TextStyle(
+                    fontSize: 12.0,
+                    color: Colors.black,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                const Text(
+                  'No : 083849727449',
+                  style: TextStyle(
+                    fontSize: 12.0,
+                    color: Colors.black,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                const Text(
+                  'Riwayat Pendidikan : SMKN 2 Buduran',
+                  style: TextStyle(
+                    fontSize: 12.0,
+                    color: Colors.black,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                const Text(
+                  'Prestasi : Juara 2 Lomba UI Koperasi Sekolah',
+                  style: TextStyle(
+                    fontSize: 12.0,
+                    color: Colors.black,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text(
-                        'Biodata Anggota 2',
-                        style: TextStyle(
-                          fontSize: 15.0,
-                          color: Colors.black,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w600,
+                    Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          _launchEmail('22082010035@student.upnjatim.ac.id');
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor:
+                              const Color.fromARGB(255, 207, 205, 89),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                        ),
+                        child: const Row(
+                          children: [
+                            Icon(
+                              Icons.email,
+                              color: Colors.white,
+                              size: 16.0,
+                            ),
+                            SizedBox(width: 8),
+                            Text(
+                              'Email',
+                              style: TextStyle(
+                                fontSize: 12.0,
+                                color: Colors.white,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
-                    Container(
-                      alignment: Alignment.center,
-                      child: Image.asset(
-                        'image/risda.jpg',
-                        width: 100,
-                        fit: BoxFit.cover,
+                    Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          const url = 'https://github.com/Talia-Apr';
+                          _launchGitHub(url);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor:
+                              const Color.fromARGB(255, 207, 205, 89),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                        ),
+                        child: const Row(
+                          children: [
+                            FaIcon(
+                              FontAwesomeIcons.github,
+                              color: Colors.white,
+                              size: 16.0,
+                            ),
+                            SizedBox(width: 8),
+                            Text(
+                              'GitHub',
+                              style: TextStyle(
+                                fontSize: 12.0,
+                                color: Colors.white,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                    const Text(
-                      'Nama : Risda Rahmawati Harsono',
-                      style: TextStyle(
-                        fontSize: 12.0,
-                        color: Colors.black,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                    const Text(
-                            'TTL : Sidoarjo, 01 Februari 2004',
-                            style: TextStyle(
-                              fontSize: 12.0,
-                              color: Colors.black,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                          const Text(
-                            'Alamat : Kali Tengah, Tanggulangin-Sidoarjo',
-                            style: TextStyle(
-                              fontSize: 12.0,
-                              color: Colors.black,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                          const Text(
-                            'No : 0895326442194 / 087753396348',
-                            style: TextStyle(
-                              fontSize: 12.0,
-                              color: Colors.black,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),                          
-                          const Text(
-                            'Riwayat Pendidikan : SMKN 2 Buduran',
-                            style: TextStyle(
-                              fontSize: 12.0,
-                              color: Colors.black,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                          const Text(
-                            'Prestasi : Juara 2 LKS AI Wilker 1 Jawa Timur',
-                            style: TextStyle(
-                              fontSize: 12.0,
-                              color: Colors.black,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(3.0),
-                                child: ElevatedButton(
-                                  onPressed: () {
-                                    _launchEmail('22082010040@student.upnjatim.ac.id');
-                                  },
-                                  style: ElevatedButton.styleFrom(
-                                    backgroundColor: const Color.fromARGB(255, 207, 205, 89),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(20.0),
-                                    ),
-                                  ),
-                                  child: const Row(
-                                    children: [
-                                      Icon(
-                                        Icons.email,
-                                        color: Colors.white,
-                                        size: 16.0,
-                                      ),
-                                      SizedBox(width: 8),
-                                      Text(
-                                        'Email',
-                                        style: TextStyle(
-                                          fontSize: 12.0,
-                                          color: Colors.white,
-                                          fontFamily: 'Poppins',
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(3.0), 
-                                child: ElevatedButton(
-                                  onPressed: () {
-                                    const url = 'https://github.com/risdaah';
-                                    _launchGitHub(url);
-                                  },
-                                  style: ElevatedButton.styleFrom(
-                                    backgroundColor: const Color.fromARGB(255, 207, 205, 89),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(20.0),
-                                    ),
-                                  ),
-                                  child: const Row(
-                                    children: [
-                                      FaIcon(
-                                        FontAwesomeIcons.github,
-                                        color: Colors.white,
-                                        size: 16.0,
-                                      ),
-                                      SizedBox(width: 8),
-                                      Text(
-                                        'GitHub',
-                                        style: TextStyle(
-                                          fontSize: 12.0,
-                                          color: Colors.white,
-                                          fontFamily: 'Poppins',
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              bottomNavigationBar: Container(
-                height: 50,
-                decoration: const BoxDecoration(
-                  color: Color(0xFFe7e571),
+                  ],
                 ),
-                child: const Center(
+              ],
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(5.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Text(
-                    'Copyright © 2024 | All Rights Reserved | Kelompok 17',
+                    'Biodata Anggota 2',
                     style: TextStyle(
-                      fontSize: 12.0,
-                      color: Color.fromARGB(255, 120, 119, 51),
+                      fontSize: 15.0,
+                      color: Colors.black,
                       fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w400,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                 ),
-              ),
-            );
-          }
+                Container(
+                  alignment: Alignment.center,
+                  child: Image.asset(
+                    'image/risda.jpg',
+                    width: 100,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                const Text(
+                  'Nama : Risda Rahmawati Harsono',
+                  style: TextStyle(
+                    fontSize: 12.0,
+                    color: Colors.black,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                const Text(
+                  'TTL : Sidoarjo, 01 Februari 2004',
+                  style: TextStyle(
+                    fontSize: 12.0,
+                    color: Colors.black,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                const Text(
+                  'Alamat : Kali Tengah, Tanggulangin-Sidoarjo',
+                  style: TextStyle(
+                    fontSize: 12.0,
+                    color: Colors.black,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                const Text(
+                  'No : 0895326442194 / 087753396348',
+                  style: TextStyle(
+                    fontSize: 12.0,
+                    color: Colors.black,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                const Text(
+                  'Riwayat Pendidikan : SMKN 2 Buduran',
+                  style: TextStyle(
+                    fontSize: 12.0,
+                    color: Colors.black,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                const Text(
+                  'Prestasi : Juara 2 LKS AI Wilker 1 Jawa Timur',
+                  style: TextStyle(
+                    fontSize: 12.0,
+                    color: Colors.black,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          _launchEmail('22082010040@student.upnjatim.ac.id');
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor:
+                              const Color.fromARGB(255, 207, 205, 89),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                        ),
+                        child: const Row(
+                          children: [
+                            Icon(
+                              Icons.email,
+                              color: Colors.white,
+                              size: 16.0,
+                            ),
+                            SizedBox(width: 8),
+                            Text(
+                              'Email',
+                              style: TextStyle(
+                                fontSize: 12.0,
+                                color: Colors.white,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          const url = 'https://github.com/risdaah';
+                          _launchGitHub(url);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor:
+                              const Color.fromARGB(255, 207, 205, 89),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                        ),
+                        child: const Row(
+                          children: [
+                            FaIcon(
+                              FontAwesomeIcons.github,
+                              color: Colors.white,
+                              size: 16.0,
+                            ),
+                            SizedBox(width: 8),
+                            Text(
+                              'GitHub',
+                              style: TextStyle(
+                                fontSize: 12.0,
+                                color: Colors.white,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+      bottomNavigationBar: Container(
+        height: 50,
+        decoration: const BoxDecoration(
+          color: Color(0xFFe7e571),
+        ),
+        child: const Center(
+          child: Text(
+            'Copyright © 2024 | All Rights Reserved | Kelompok 17',
+            style: TextStyle(
+              fontSize: 12.0,
+              color: Color.fromARGB(255, 120, 119, 51),
+              fontFamily: 'Poppins',
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 
-      void _launchGitHub(String url) async {
-        if (await canLaunch(url)) {
-          await launch(url);
-        } else {
-          throw 'Could not launch $url';
-        }
-      }
+  void _launchGitHub(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 
-      void _launchEmail(String email) async {
-        final Uri _emailLaunchUri = Uri(
-          scheme: 'mailto',
-          path: email,
-          queryParameters: {
-            'subject': 'Email',
-            'body': 'Mengirim Email',
-          },
-        );
-        final String uri = _emailLaunchUri.toString();
-        if (await canLaunch(uri)) {
-          await launch(uri);
-        } else {
-          throw 'Could not launch $uri';
-        }
-      }
+  void _launchEmail(String email) async {
+    final Uri _emailLaunchUri = Uri(
+      scheme: 'mailto',
+      path: email,
+      queryParameters: {
+        'subject': 'Email',
+        'body': 'Mengirim Email',
+      },
+    );
+    final String uri = _emailLaunchUri.toString();
+    if (await canLaunch(uri)) {
+      await launch(uri);
+    } else {
+      throw 'Could not launch $uri';
+    }
+  }
 }
 
 void main() {
@@ -435,17 +439,18 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: const Color(0xFFe7e571),
         actions: [
           Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: IconButton(
-            icon: const Icon(Icons.person),
-            color: Colors.white,
-            onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                return Profil();
-              }));
-            },
-          ),
-        )
+            padding: const EdgeInsets.all(8.0),
+            child: IconButton(
+              icon: const Icon(Icons.person),
+              color: Colors.white,
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return Profil();
+                }));
+              },
+            ),
+          )
         ],
       ),
       body: ListView(
@@ -475,7 +480,7 @@ class MyHomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'PROFIL FAKULTAS FISIP UPN JATIM',
+                        'PROFIL FAKULTAS FISIP UPNV JATIM',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20.0,
@@ -514,20 +519,22 @@ class MyHomePage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) {
-                            return DetailProdi(
-                              prodi: Prodi.samples[index],
-                              visimisi: VisiMisi.samples[index],
-                              dosen: Dosen.samples[index],
-                              akreditasi: Akreditasi.samples[index],
-                              prestasimhs: PrestasiMhs.samples[index],
-                            );
-                          },
-                        ),
+                        builder: (context) {
+                          return DetailProdi(
+                            prodi: Prodi.samples[index],
+                            visimisi: VisiMisi.samples[index],
+                            dosen: Dosen.samples[index],
+                            akreditasi: Akreditasi.samples[index],
+                            prestasimhs: PrestasiMhs.samples[index],
+                          );
+                        },
+                      ),
                     );
                   },
                   child: Container(
-                    color: index % 2 == 0 ? const Color(0xFFe7e571) : const Color(0xFFe7e571),
+                    color: index % 2 == 0
+                        ? const Color(0xFFe7e571)
+                        : const Color(0xFFe7e571),
                     child: buildProdiCard(Prodi.samples[index]),
                   ),
                 );
@@ -578,7 +585,8 @@ class MyHomePage extends StatelessWidget {
                       child: Row(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(top: 30.0, left: 40.0),
+                            padding:
+                                const EdgeInsets.only(top: 30.0, left: 40.0),
                             child: Container(
                               alignment: Alignment.center,
                               child: Image.asset(
@@ -591,7 +599,8 @@ class MyHomePage extends StatelessWidget {
                           Expanded(
                             child: Center(
                               child: Padding(
-                                padding: const EdgeInsets.only(top: 40.0, left: 30.0, right: 40.0),
+                                padding: const EdgeInsets.only(
+                                    top: 40.0, left: 30.0, right: 40.0),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -617,7 +626,8 @@ class MyHomePage extends StatelessWidget {
                                       cursor: SystemMouseCursors.click,
                                       child: GestureDetector(
                                         onTap: () {
-                                          _launchEmailFisip('fisip@upnjatim.ac.id');
+                                          _launchEmailFisip(
+                                              'fisip@upnjatim.ac.id');
                                         },
                                         child: const Row(
                                           children: [
@@ -626,16 +636,16 @@ class MyHomePage extends StatelessWidget {
                                               color: Colors.white,
                                               size: 15.0,
                                             ),
-                                              SizedBox(width: 4.0),
-                                              Text(
-                                                'Email : fisip@upnjatim.ac.id',
-                                                style: TextStyle(
-                                                  fontSize: 12.0,
-                                                  color: Colors.white,
-                                                  fontFamily: 'Poppins',
-                                                  fontWeight: FontWeight.w400,
-                                                ),
+                                            SizedBox(width: 4.0),
+                                            Text(
+                                              'Email : fisip@upnjatim.ac.id',
+                                              style: TextStyle(
+                                                fontSize: 12.0,
+                                                color: Colors.white,
+                                                fontFamily: 'Poppins',
+                                                fontWeight: FontWeight.w400,
                                               ),
+                                            ),
                                           ],
                                         ),
                                       ),
@@ -644,25 +654,26 @@ class MyHomePage extends StatelessWidget {
                                       cursor: SystemMouseCursors.click,
                                       child: GestureDetector(
                                         onTap: () {
-                                          _launchURL('https://www.instagram.com/fisipupnvjatim/');
+                                          _launchURL(
+                                              'https://www.instagram.com/fisipupnvjatim/');
                                         },
                                         child: const Row(
                                           children: [
                                             FaIcon(
-                                                FontAwesomeIcons.instagram,
-                                                size: 15.0,
+                                              FontAwesomeIcons.instagram,
+                                              size: 15.0,
+                                              color: Colors.white,
+                                            ),
+                                            SizedBox(width: 4.0),
+                                            Text(
+                                              'Instagram : fisipupnvjatim',
+                                              style: TextStyle(
+                                                fontSize: 12.0,
                                                 color: Colors.white,
+                                                fontFamily: 'Poppins',
+                                                fontWeight: FontWeight.w400,
                                               ),
-                                              SizedBox(width: 4.0),
-                                              Text(
-                                                'Instagram : fisipupnvjatim',
-                                                style: TextStyle(
-                                                  fontSize: 12.0,
-                                                  color: Colors.white,
-                                                  fontFamily: 'Poppins',
-                                                  fontWeight: FontWeight.w400,
-                                                ),
-                                              ),
+                                            ),
                                           ],
                                         ),
                                       ),
@@ -671,25 +682,26 @@ class MyHomePage extends StatelessWidget {
                                       cursor: SystemMouseCursors.click,
                                       child: GestureDetector(
                                         onTap: () {
-                                          _launchURL('https://www.tiktok.com/@fisipupnvjatim');
+                                          _launchURL(
+                                              'https://www.tiktok.com/@fisipupnvjatim');
                                         },
                                         child: const Row(
                                           children: [
                                             FaIcon(
-                                                FontAwesomeIcons.tiktok,
-                                                size: 15.0,
+                                              FontAwesomeIcons.tiktok,
+                                              size: 15.0,
+                                              color: Colors.white,
+                                            ),
+                                            SizedBox(width: 4.0),
+                                            Text(
+                                              'Tiktok : fisipupnvjatim',
+                                              style: TextStyle(
+                                                fontSize: 12.0,
                                                 color: Colors.white,
+                                                fontFamily: 'Poppins',
+                                                fontWeight: FontWeight.w400,
                                               ),
-                                              SizedBox(width: 4.0),
-                                              Text(
-                                                'Tiktok : fisipupnvjatim',
-                                                style: TextStyle(
-                                                  fontSize: 12.0,
-                                                  color: Colors.white,
-                                                  fontFamily: 'Poppins',
-                                                  fontWeight: FontWeight.w400,
-                                                ),
-                                              ),
+                                            ),
                                           ],
                                         ),
                                       ),
@@ -698,25 +710,26 @@ class MyHomePage extends StatelessWidget {
                                       cursor: SystemMouseCursors.click,
                                       child: GestureDetector(
                                         onTap: () {
-                                          _launchURL('https://www.facebook.com/people/FISIP-UPN-Veteran-Jawa-Timur/100090930265755/');
+                                          _launchURL(
+                                              'https://www.facebook.com/people/FISIP-UPN-Veteran-Jawa-Timur/100090930265755/');
                                         },
                                         child: const Row(
                                           children: [
                                             FaIcon(
-                                                FontAwesomeIcons.facebook,
-                                                size: 15.0,
+                                              FontAwesomeIcons.facebook,
+                                              size: 15.0,
+                                              color: Colors.white,
+                                            ),
+                                            SizedBox(width: 4.0),
+                                            Text(
+                                              'Facebook : FISIP UPN "Veteran" Jawa Timur',
+                                              style: TextStyle(
+                                                fontSize: 12.0,
                                                 color: Colors.white,
+                                                fontFamily: 'Poppins',
+                                                fontWeight: FontWeight.w400,
                                               ),
-                                              SizedBox(width: 4.0),
-                                              Text(
-                                                'Facebook : FISIP UPN "Veteran" Jawa Timur',
-                                                style: TextStyle(
-                                                  fontSize: 12.0,
-                                                  color: Colors.white,
-                                                  fontFamily: 'Poppins',
-                                                  fontWeight: FontWeight.w400,
-                                                ),
-                                              ),
+                                            ),
                                           ],
                                         ),
                                       ),
@@ -725,7 +738,8 @@ class MyHomePage extends StatelessWidget {
                                       cursor: SystemMouseCursors.click,
                                       child: GestureDetector(
                                         onTap: () {
-                                          _launchURL('https://fisip.upnjatim.ac.id/');
+                                          _launchURL(
+                                              'https://fisip.upnjatim.ac.id/');
                                         },
                                         child: const Row(
                                           children: [
@@ -734,16 +748,16 @@ class MyHomePage extends StatelessWidget {
                                               color: Colors.white,
                                               size: 16.0,
                                             ),
-                                              SizedBox(width: 4.0),
-                                              Text(
-                                                'Kunjungi Website FISIP',
-                                                  style: TextStyle(
-                                                    fontSize: 12.0,
-                                                    color: Colors.white,
-                                                    fontFamily: 'Poppins',
-                                                    fontWeight: FontWeight.w400,
-                                                  ),
+                                            SizedBox(width: 4.0),
+                                            Text(
+                                              'Kunjungi Website FISIP',
+                                              style: TextStyle(
+                                                fontSize: 12.0,
+                                                color: Colors.white,
+                                                fontFamily: 'Poppins',
+                                                fontWeight: FontWeight.w400,
                                               ),
+                                            ),
                                           ],
                                         ),
                                       ),
@@ -808,7 +822,6 @@ class MyHomePage extends StatelessWidget {
       throw 'Could not launch $uri';
     }
   }
-
 
   Widget buildProdiCard(Prodi prodi) {
     return Card(
