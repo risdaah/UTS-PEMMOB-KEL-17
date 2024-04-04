@@ -620,7 +620,7 @@ void _launchEmail(String email) async {
     path: email,
     queryParameters: {
       'subject': 'Email',
-      'body': 'Mengirim ke Talia',
+      'body': 'Mengirim Email',
     },
   );
   final String uri = _emailLaunchUri.toString();
