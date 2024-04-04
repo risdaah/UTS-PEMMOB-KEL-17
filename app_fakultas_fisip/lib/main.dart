@@ -812,7 +812,7 @@ class MyHomePage extends StatelessWidget {
       path: email,
       queryParameters: {
         'subject': 'Email',
-        'body': 'Mengirim ke Talia',
+        'body': 'Mengirim ke Fisip',
       },
     );
     final String uri = _emailLaunchUri.toString();
