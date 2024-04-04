@@ -12,22 +12,22 @@ class PrestasiMhs {
           'Juara 3 Pada Lomba Badminton Acara FISIP Sparta 2023 Universitas Brawijaya'),
       PrestasiMahasiswa('image/adpub-ahmad.jpg', 'Ahmad Fais Muludin', '2022',
           'Juara 1 Poomsae Festival Putra Diselenggarakan oleh Pangdam V Brawijaya 09-10 Juni 2023 di Gor Hayam Wuruk Kodam V Brawijaya'),
-      PrestasiMahasiswa('image/adpub-ahmad.jpg', 'Ahmad Fais Muludin', '2022',
-          'Juara 1 Poomsae Festival Putra Diselenggarakan oleh Pangdam V Brawijaya 09-10 Juni 2023 di Gor Hayam Wuruk Kodam V Brawijaya'),
+      PrestasiMahasiswa('image/adpub-nain.png', 'Nain Nur Kholif', '2022',
+          'Juara 1 Lomba Esai Nasional Inspiria Fest AKK Fair 2023 Diselenggarakan oleh Forum Administrasi dan Kebijakan Kesehatan, Fakultas Kesehatan Masyarakat Universitas Diponegoro pada Kamis, 5 Oktober 2023 di Undip'),
     ]),
     PrestasiMhs('Administrasi Bisnis', [
       PrestasiMahasiswa(
           'image/adbis-talita.jpg',
           'Talita Karisma Syahrani',
           '2021',
-          'Juara 3 Pada Lomba Badminton Acara FISIP Sparta 2023 Universitas Brawijaya'),
+          'Juara 2 100m Bifin Putri, Juara 3 50m Bifin Putri, Juara 3 4x100m Bifin Putri Pada Pekan Olahraga Provinsi Jawa Timur VIII Tahun 2003 di Kolam Renang STKIP Jombang pada 12-15 September 2023'),
       PrestasiMahasiswa(
           'image/adbis-rista.jpg',
           'Rista Maria Hartono Putri',
           '2022',
           'Pemenang 1 Duta Bahasa Jawa Timur 2023 Diselenggarakan oleh Balai Bahasa Jawa Timur di Hotel Grand Mercure Mirama pada 21 Mei 2023'),
       PrestasiMahasiswa('image/adbis-silvia.jpg', 'Silvia Nur Safitri', '2021',
-          'Juara Persahabatan Duta Perlindungan Anak Jawa Timur 2023\nDiselenggarakan oleh Paguyuban Duta Perlindungan Anak Jawa Timur 13 Agustus 2023 di Ciputra World Surabaya'),
+          'Juara Persahabatan Duta Perlindungan Anak Jawa Timur 2023 Diselenggarakan oleh Paguyuban Duta Perlindungan Anak Jawa Timur 13 Agustus 2023 di Ciputra World Surabaya'),
     ]),
     PrestasiMhs('Ilmu Komunikasi', [
       PrestasiMahasiswa('image/ilkom-yasinta.jpg', 'Yasinta Aurellia', '2021',
@@ -41,7 +41,7 @@ class PrestasiMhs {
           'image/ilkom-niken-fajar-putri.jpg',
           'Niken Desy Nisaulfitri\nFajar Al Haidar\nPutri Raissa Zaravina',
           '2019',
-          'Juara 2 Lomba Arjuna Kategori Homeless Media dalam Festival Ajisaka 2023\nDiselenggarakan oleh Korps Mahasiswa Komunikasi UGM 20-11 Maret 2023 di Gedung BF Seminar Timur, FISIPOL UGM '),
+          'Juara 2 Lomba Arjuna Kategori Homeless Media dalam Festival Ajisaka 2023 Diselenggarakan oleh Korps Mahasiswa Komunikasi UGM 20-11 Maret 2023 di Gedung BF Seminar Timur, FISIPOL UGM '),
     ]),
     PrestasiMhs('Hubungan Internasional', [
       PrestasiMahasiswa('image/hi-priyanka.jpg', 'Priyanka Kareena W', '2022',

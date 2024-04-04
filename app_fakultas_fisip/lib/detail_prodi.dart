@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter/widgets.dart';
 import 'prodi.dart';
 import 'visimisi.dart';
 import 'dosen.dart';
@@ -34,7 +34,7 @@ class _DetailProdiState extends State<DetailProdi> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: DefaultTabController(
-        length: 5,
+        length: 4,
         child: Scaffold(
           appBar: AppBar(
             leading: IconButton(
@@ -55,25 +55,24 @@ class _DetailProdiState extends State<DetailProdi> {
             bottom: const TabBar(
               labelStyle: TextStyle(
                 fontFamily: 'Poppins',
+                color: Color.fromARGB(255, 120, 119, 51),
+                fontWeight: FontWeight.w600,
+                fontSize: 15,
+              ),
+              unselectedLabelStyle: TextStyle(
+                fontFamily: 'Poppins',
                 color: Colors.white,
                 fontWeight: FontWeight.w500,
                 fontSize: 13,
               ),
-              unselectedLabelStyle: TextStyle(
-                fontFamily: 'Poppins',
-                color: Color.fromARGB(255, 120, 119, 51),
-                fontWeight: FontWeight.w500,
-                fontSize: 13,
-              ),
-              indicatorColor: Colors.white,
+              indicatorColor: Color.fromARGB(255, 120, 119, 51),
               indicatorWeight: 5,
               indicatorSize: TabBarIndicatorSize.label,
               tabs: [
                 Tab(text: "Profil"),
                 Tab(text: "Visi & Misi"),
-                Tab(text: "Akreditasi"),
                 Tab(text: "Dosen"),
-                Tab(text: "Prestasi"),
+                Tab(text: "Prestasi")
               ],
             ),
             backgroundColor: const Color(0xFFe7e571),
@@ -81,122 +80,263 @@ class _DetailProdiState extends State<DetailProdi> {
           body: TabBarView(
             children: [
               // Profil
-              ListView(
-                children: [
-                  Stack(
-                    children: [
-                      Image.asset(
-                        widget.prodi.headerImg,
-                        fit: BoxFit.cover,
-                        width: double.infinity,
-                        height: 200,
-                      ),
-                      Container(
-                        height: 200,
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            begin: Alignment.topCenter,
-                            end: Alignment.bottomCenter,
-                            colors: [
-                              Colors.transparent,
-                              const Color(0xFFe7e571).withOpacity(0.7),
-                            ],
+              SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Stack(
+                      children: [
+                        Image.asset(
+                          widget.prodi.headerImg,
+                          fit: BoxFit.cover,
+                          width: double.infinity,
+                          height: 200,
+                        ),
+                        Container(
+                          height: 200,
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                Colors.transparent,
+                                const Color(0xFFe7e571).withOpacity(0.7),
+                              ],
+                            ),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Tentang ${widget.prodi.nProdi}',
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 20.0,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.bold,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
                           ),
                         ),
-                        child: Center(
-                          child: Text(
-                            'Tentang ${widget.prodi.nProdi}',
-                            style: const TextStyle(
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16.0, vertical: 10.0),
+                      child: Text(
+                        widget.prodi.deskProdi1,
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 15.0,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.normal,
+                        ),
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16.0, vertical: 10.0),
+                      child: Text(
+                        widget.prodi.deskProdi2,
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 15.0,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.normal,
+                        ),
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16.0, vertical: 10.0),
+                      child: Text(
+                        widget.prodi.deskProdi3,
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 15.0,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.normal,
+                        ),
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text(
+                        'Akreditasi ${widget.akreditasi.akre}',
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 18.0,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.bold,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Stack(
+                      children: [
+                        Image.asset(
+                          'image/upn.jpeg',
+                          fit: BoxFit.cover,
+                          width: double.infinity,
+                          height: 250,
+                        ),
+                        Container(
+                          height: 250,
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                Colors.transparent,
+                                Colors.black.withOpacity(0.9),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Container(
+                          alignment: Alignment.center,
+                          padding: const EdgeInsets.all(30.0),
+                          child: const Text(
+                            'SELENGKAPNYA',
+                            style: TextStyle(
                               color: Colors.white,
-                              fontSize: 20.0,
+                              fontSize: 15.0,
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.bold,
                             ),
                             textAlign: TextAlign.center,
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 16.0, vertical: 10.0),
-                    child: Text(
-                      widget.prodi.deskProdi1,
-                      style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 15.0,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.normal,
-                      ),
-                      textAlign: TextAlign.justify,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 16.0, vertical: 10.0),
-                    child: Text(
-                      widget.prodi.deskProdi2,
-                      style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 15.0,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.normal,
-                      ),
-                      textAlign: TextAlign.justify,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 16.0, vertical: 10.0),
-                    child: Text(
-                      widget.prodi.deskProdi3,
-                      style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 15.0,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.normal,
-                      ),
-                      textAlign: TextAlign.justify,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(5.0),
-                    child: GestureDetector(
-                      onTap: () => launch(widget.visimisi.linkweb),
-                      child: Container(
-                        child: Text(
-                          widget.visimisi.linkweb,
-                          style: const TextStyle(
-                            fontSize: 20,
-                            color: Colors
-                                .blue, // Ubah warna teks menjadi biru agar terlihat seperti tautan
-                            decoration: TextDecoration
-                                .underline, // Tambahkan garis bawah agar terlihat seperti tautan
+                        Positioned.fill(
+                          child: Column(
+                            children: [
+                              Container(
+                                alignment: Alignment.center,
+                                height: 200,
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 30.0, left: 40.0),
+                                      child: Container(
+                                        alignment: Alignment.center,
+                                        child: Image.asset(
+                                          widget.prodi.logo,
+                                          width: 100,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                    Expanded(
+                                      child: Center(
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 80.0,
+                                              left: 30.0,
+                                              right: 40.0),
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              const Text(
+                                                'Jl. Rungkut Madya No.1, Gn. Anyar, Kec. Gn. Anyar, Kota SBY, Jawa Timur 60294',
+                                                style: TextStyle(
+                                                  fontSize: 12.0,
+                                                  color: Colors.white,
+                                                  fontFamily: 'Poppins',
+                                                  fontWeight: FontWeight.w400,
+                                                ),
+                                              ),
+                                              MouseRegion(
+                                                cursor:
+                                                    SystemMouseCursors.click,
+                                                child: GestureDetector(
+                                                  onTap: () => _launchEmail(
+                                                      widget.prodi.email),
+                                                  child: const Row(
+                                                    children: [
+                                                      Icon(
+                                                        Icons.email,
+                                                        color: Colors.white,
+                                                        size: 16.0,
+                                                      ),
+                                                      SizedBox(width: 4.0),
+                                                      Text(
+                                                        'Kirim Email',
+                                                        style: TextStyle(
+                                                          fontSize: 12.0,
+                                                          color: Colors.white,
+                                                          fontFamily: 'Poppins',
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
+                                              MouseRegion(
+                                                cursor:
+                                                    SystemMouseCursors.click,
+                                                child: GestureDetector(
+                                                  onTap: () => _launchWeb(
+                                                      widget.prodi.web),
+                                                  child: const Row(
+                                                    children: [
+                                                      Icon(
+                                                        Icons.link,
+                                                        color: Colors.white,
+                                                        size: 16.0,
+                                                      ),
+                                                      SizedBox(width: 4.0),
+                                                      Text(
+                                                        'Kunjungi Website',
+                                                        style: TextStyle(
+                                                          fontSize: 12.0,
+                                                          color: Colors.white,
+                                                          fontFamily: 'Poppins',
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                height: 50,
+                                width: MediaQuery.of(context).size.width,
+                                decoration: const BoxDecoration(
+                                  color: Color(0xFFe7e571),
+                                ),
+                                child: const Center(
+                                  child: Text(
+                                    'Copyright © 2024 | All Rights Reserved | Kelompok 17',
+                                    style: TextStyle(
+                                      fontSize: 12.0,
+                                      color: Color.fromARGB(255, 120, 119, 51),
+                                      fontFamily: 'Poppins',
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                      ),
+                      ],
                     ),
-                  ),
-                  Container(
-                    height: 50,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFe7e571),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'Copyright © 2024 | All Rights Reserved | Kelompok 17',
-                        style: TextStyle(
-                          fontSize: 12.0,
-                          color: Color.fromARGB(255, 120, 119, 51),
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
 
               // Visi Misi
@@ -238,9 +378,23 @@ class _DetailProdiState extends State<DetailProdi> {
                       ),
                     ],
                   ),
+                  const Padding(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 16.0, vertical: 6.0),
+                    child: Text(
+                      'VISI',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 15.0,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w600,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
                   Padding(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 16.0, vertical: 10.0),
+                        horizontal: 16.0, vertical: 8.0),
                     child: Text(
                       widget.visimisi.visiprodi,
                       style: const TextStyle(
@@ -250,6 +404,20 @@ class _DetailProdiState extends State<DetailProdi> {
                         fontWeight: FontWeight.normal,
                       ),
                       textAlign: TextAlign.justify,
+                    ),
+                  ),
+                  const Padding(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 16.0, vertical: 2.0),
+                    child: Text(
+                      'MISI',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 15.0,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w600,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                   Padding(
@@ -266,66 +434,10 @@ class _DetailProdiState extends State<DetailProdi> {
                       textAlign: TextAlign.justify,
                     ),
                   ),
-                  Container(
-                    height: 50,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFe7e571),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'Copyright © 2024 | All Rights Reserved | Kelompok 17',
-                        style: TextStyle(
-                          fontSize: 12.0,
-                          color: Color.fromARGB(255, 120, 119, 51),
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ),
-                  ),
                 ],
               ),
 
-              // Akreditasi
-              SingleChildScrollView(
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.all(10.0),
-                      child: Container(
-                        constraints: BoxConstraints(
-                            maxWidth: MediaQuery.of(context).size.width - 20),
-                        child: Text(
-                          'Akreditasi Program Studi ${widget.dosen.dsnprodi}',
-                          style: const TextStyle(
-                            color: Colors.black,
-                            fontSize: 20.0,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w600,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(10.0),
-                      child: Text(
-                        '${widget.akreditasi.akre}',
-                        style: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 18.0,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.normal,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-
-              //Dosen
+              // Dosen
               SingleChildScrollView(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -346,7 +458,7 @@ class _DetailProdiState extends State<DetailProdi> {
                             ),
                             textAlign: TextAlign.center,
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           Container(
                             width: 200,
                             height: 200,
@@ -358,7 +470,7 @@ class _DetailProdiState extends State<DetailProdi> {
                               ),
                             ),
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           Text(
                             widget.dosen.kaprodi,
                             style: const TextStyle(
@@ -369,14 +481,14 @@ class _DetailProdiState extends State<DetailProdi> {
                             ),
                             textAlign: TextAlign.center,
                           ),
-                          SizedBox(height: 15),
+                          const SizedBox(height: 15),
                         ],
                       ),
                     ),
                     ListView.builder(
                       padding: const EdgeInsets.all(10.0),
                       shrinkWrap: true,
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       itemCount: widget.dosen.ddosen.length,
                       itemBuilder: (BuildContext context, int index) {
                         final ddosen = widget.dosen.ddosen[index];
@@ -393,7 +505,7 @@ class _DetailProdiState extends State<DetailProdi> {
                                   backgroundImage: AssetImage(ddosen.fotodosen),
                                 ),
                               ),
-                              SizedBox(height: 5),
+                              const SizedBox(height: 5),
                               Expanded(
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment
@@ -407,7 +519,7 @@ class _DetailProdiState extends State<DetailProdi> {
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                    SizedBox(height: 8),
+                                    const SizedBox(height: 8),
                                     Text(
                                       'Dosen Prodi ${widget.prodi.nProdi}',
                                       style: const TextStyle(
@@ -423,24 +535,6 @@ class _DetailProdiState extends State<DetailProdi> {
                         );
                       },
                     ),
-                    Container(
-                      height: 50,
-                      width: MediaQuery.of(context).size.width,
-                      decoration: const BoxDecoration(
-                        color: Color(0xFFe7e571),
-                      ),
-                      child: const Center(
-                        child: Text(
-                          'Copyright © 2024 | All Rights Reserved | Kelompok 17',
-                          style: TextStyle(
-                            fontSize: 12.0,
-                            color: Color.fromARGB(255, 120, 119, 51),
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                      ),
-                    ),
                   ],
                 ),
               ),
@@ -449,7 +543,7 @@ class _DetailProdiState extends State<DetailProdi> {
               ListView.builder(
                 padding: const EdgeInsets.all(15.0),
                 shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 itemCount: widget.prestasimhs.prestasimahasiswa.length,
                 itemBuilder: (BuildContext context, int index) {
                   final pres = widget.prestasimhs.prestasimahasiswa[index];
@@ -465,7 +559,7 @@ class _DetailProdiState extends State<DetailProdi> {
                             backgroundImage: AssetImage(pres.fotopres),
                           ),
                         ),
-                        SizedBox(height: 5),
+                        const SizedBox(height: 5),
                         Expanded(
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment
@@ -479,21 +573,22 @@ class _DetailProdiState extends State<DetailProdi> {
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              SizedBox(height: 4),
+                              const SizedBox(height: 4),
                               Text(
-                                pres.angkatan,
+                                'Angkatan ${pres.angkatan}',
                                 style: const TextStyle(
                                   fontSize: 14,
                                   color: Colors.grey,
                                 ),
                               ),
-                              SizedBox(height: 4),
+                              const SizedBox(height: 4),
                               Text(
                                 pres.prestasi,
                                 style: const TextStyle(
                                   fontSize: 15,
                                   color: Colors.black87,
                                 ),
+                                textAlign: TextAlign.justify,
                               ),
                             ],
                           ),
@@ -508,5 +603,30 @@ class _DetailProdiState extends State<DetailProdi> {
         ),
       ),
     );
+  }
+}
+
+void _launchWeb(String url) async {
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+void _launchEmail(String email) async {
+  final Uri _emailLaunchUri = Uri(
+    scheme: 'mailto',
+    path: email,
+    queryParameters: {
+      'subject': 'Email',
+      'body': 'Mengirim ke Talia',
+    },
+  );
+  final String uri = _emailLaunchUri.toString();
+  if (await canLaunch(uri)) {
+    await launch(uri);
+  } else {
+    throw 'Could not launch $uri';
   }
 }

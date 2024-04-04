@@ -4,7 +4,8 @@ class Dosen {
   Dosen(this.dsnprodi, this.ftokaprodi, this.kaprodi, this.ddosen);
 
   static List<Dosen> samples = [
-    Dosen('Administrasi Publik', 'haha', 'haha', [
+    Dosen('Administrasi Publik', 'image/kaprodi-adpub.png',
+        'Dra. Susi Hardjati, M.AP', [
       DDosen('Dr. Diana Hertati, MSi', 'image/adpub-diana.jpg'),
       DDosen('Dr. Agus Widiyarta, S.Sos., M.Si.', 'image/adpub-agus.jpg'),
       DDosen('Binti Azizatun Nafiah MPA S.IAN.', 'image/adpub-binti.png'),
@@ -26,11 +27,12 @@ class Dosen {
       DDosen('Dyva Claretta, Dra, M.Si', 'image/ilkom-dyva.png'),
       DDosen('Aulia Rahmawati, Ph.D S.Sos., M.Si', 'image/ilkom-aulia.png'),
       DDosen('Dr. Yudiana Indriastuti, S.Sos., M.Si', 'image/kaprodi-pw.png'),
-      DDosen('Didik Tranggono, Ir,M.Si', 'image/pw-joko.jpg'),
+      DDosen('Ade Kusuma, S. Sos, M.Med.Kom', 'image/ilkom-ade.jpeg'),
     ]),
-    Dosen('Hubungan Internasional', 'haha', 'haha', [
+    Dosen('Hubungan Internasional', 'image/hi-herlina.png',
+        'Dra. Herlina Suksmawati, M.Si.', [
       DDosen('Adiasri Putri Purbantina, Ph.D', 'image/hi-adiasari.png'),
-      DDosen('Dra. Herlina Suksmawati, M.Si.', 'image/hi-herlina.png'),
+      DDosen('Ario Bimo Utomo, S.I.P., MIR.', 'image/hi-bimo.png'),
       DDosen('Maria Indira Aryani, S.IP., M.Hub.Int', 'image/hi-maria.png'),
       DDosen('Prihandono Wibowo, S.Hub.Int., M.Hub.Int.',
           'image/hi-prihandono.png'),
